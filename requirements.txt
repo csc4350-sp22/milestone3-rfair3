@@ -1,0 +1,12 @@
+Flask
+flask
+requests
+python-dotenv
+flask-login
+Flask-WTF
+Flask-SQLAlchemy
+WTForms
+Flask-bcrypt
+psycopg2
+
+
