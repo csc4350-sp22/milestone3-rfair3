@@ -121,6 +121,35 @@ def newcomment():
 
 
 #This route should fetch data from Comment API and display on react page
+@bp.route("/comment_fetch", methods=["GET",'POST'])
+def commentfetch():
+    Comments = Comment.query.all()
+
+    view_comments = []
+
+    for c in Comments:
+        view_comments.append({
+            "movieid": c.movieid,
+            "comments": c.comments,
+            "username": c.username,
+            "rating": c.rating,
+        })
+        print(view_comments)
+        return jsonify({"Comments": view_comments})
+
+
+@bp.route("/save_comments", methods=["GET",'POST'])
+def savecomments():
+    Comments = Comment.query.filter_by(username= current_user.username).all()
+
+    edited_comments = flask.request.get_json()
+    
+
+
+    return("Your changes have been successfully saved", print(edited_comments))
+
+    
+
 
 
 
