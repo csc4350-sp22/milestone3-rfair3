@@ -25,7 +25,7 @@ You will need to install the following using pip or pip3 install:
 
 9.dotenv
 
-10. psycopg2
+10.psycopg2
 
 
 You also need to reqister for 3 things. The first is a api key from The Movie Database. You must apply for a API key by creating a profile as well as applying for the API key itself.
