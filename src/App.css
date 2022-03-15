@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #D35400;;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+body {
+  background-color: #D35400;
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
+}
+#change{
+  background-color: black;
+  color: white;
+}
+

@@ -1,60 +1,50 @@
-# Milestone2-rfair3
+# Milestone3-rfair3
 
-Link to Heroku: https://peaceful-depths-02160.herokuapp.com/ 
+## How to get Started:
 
-For anyone looking to clone my repository and run the app locally: 
+###
+For anyone looking to clone my repository and run the app locally:
 
-You will need to install the following using pip or pip3 install: 
+You will need to install the following using pip or pip3 install:
 
-Flask
+1.Flask
 
-requests
+2.requests
 
-flask-login
+3.flask-login
 
-Flask-WTf
+4.Flask-WTf
 
-Flask
+5.Flask
 
-SQLAlchemy
+6.SQLAlchemy
 
-WTForms
+7.WTForms
 
-Flaks-bcrypt
+8.Flaks-bcrypt
 
-dotenv
+9.dotenv
 
-psycopg2
+10. psycopg2
 
-You also need to reqister for 3 things. The first is a api key from The Movie Database.
-The API key that you will need is version 3. The second is register for a heroku database 
-using the command "heroku create" and "heroku addons:create heroku-postgresql:hobby-dev"
-in your terminal. IF THE URL STARTS WITH postgres:, replace that with postgresql:
-Finally you will also need t ocreate a secrect key of your choice. This can be any 
-combination of characters. Your .env file should look like the following:
+
+You also need to reqister for 3 things. The first is a api key from The Movie Database. You must apply for a API key by creating a profile as well as applying for the API key itself.
+The API key that you will need is version 3. The second is register for a heroku database using the command "heroku create" and "heroku addons:create heroku-postgresql:hobby-dev"
+in your terminal. IF THE URL STARTS WITH postgres:, replace that with postgresql: Finally you will also need t ocreate a secrect key of your choice. This can be any combination of characters. Your .env file should look like the following:
 
 export api_key= “YOUR API KEY HERE”
 export DATABASE_URL="YOUR DATABASE KEY HERE"
 export SECRET_KEY="YOUR SECRET KEY HERE"
 
-Make sure to also add the .env file to a .gitignore file. To run the app locally, in your
-terminal run "python app.py". This is all of the requirements to get the app up and running locally.
+Make sure to also add the .env file to a .gitignore file. To run the app locally, in your terminal run "python app.py". In the javascript file you need to also run npm run build. This is all of the requirements to get the app up and running locally.
 
 
-A technical issue that arose during the building process was getting the database to import from 
-VSCode to heroku app. The issue was that in Heroku, the URL was changed to postgres and needed to be 
-postgresql. This menas that any time i tried to submit a form, the app would crash. To fix this, 
-i had to use a start with and replace call which fixed the issue. This information came from one of my
-classmates in the class discord who expierenced the same problem. Another issue that arrose is that I was trying 
-to use return render_templates that made the app crash. This is due to having 2 return methods of the same type 
-running at the same time. To fix this, I returned all of my main information in 1 return template.I got this information 
-from stackoverflow and multiple youtube videos. I also rewatched lecture 8 and 9 to also work me through this issue. 
+# 3 Technical issues
+
+###
+A technical issue that arose during the building process was getting the react JS file to render in my HTML. The problem was that when I clicked on my react link, I was getting a template error index.html not found. This error held me up but it was a simple fix. To fix, instead of running npm start, I was supposed to use npm run build, which then made a static folder which contained my index.html file. Another technical issue that arose during the building process was getting the react page to read the data from my database for the comments. The problem was that my data was not in a format that JSON could read hence getting the error, Comment is not JSON serializable. To fix this, I created an array that would be readable by JSON using return flask.jsonify.
+The last technical issue that arose during the building process was getting the map to work in react. The error I was getting was the map was unable to retrieve undefined. To fix this, instead of having my useState variable empty, i used [] to keep the useState from being undefined.
 
 
-My experience working on this milestone differed greatly from what I pictured while working through
-the planning process. I thought that all I had to do was import a database into the project and that this would be 
-the process. I was completely wrong. You can't just import a table and think it will run. There were many issues i encountered
-while trying to get my database to import to my html file. The app kept crashing and it was due to the fact that the information 
-was not being passed to the index.html file. A simple fix but it took me 2 days to finally figure out what was going on with my 
-code. What was unexpectedly easy was creating a username and password system on the site. This was also done using a database and 
-comparing the password to what the user inputed. Overall the project taught me many valuable lessons along the way.
+# Hardest and Most useful
+Overall the milestones have been an eye opening experience for me. The hardest part of the milestones has been working with the API's and Databases and getting them to render onto an HTML page. Starting this class, I didn't have much Python experience but through the great learning process of this class and working through the milestones, I have learned a lot. The most useful part for me has been using overall learning how to code in Python. Working on the milestones allows me to feel more confident in my coding abilites when it comes to Python. The milestones, showed me different ways to approach a problem while retriving the same end goal.

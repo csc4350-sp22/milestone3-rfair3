@@ -6,7 +6,6 @@
 
 <body>
 	<a href="{{url_for('logout')}}">Click here to log out</a>
-	<a href="{{url_for('bp.newcomment')}}">Click here to create comment</a>
 	<h1 style="font-size:2vw">Movie Explorer</h1>
 	<h2>{{title}}</h2>
 	<h3>{{tagline}}</h3>
@@ -34,6 +33,7 @@
 		<br><br>
 	</form>
 	<h2>See What Others Think:</h2>
+	<a href="{{url_for('bp.newcomment')}}">Changed your mind? Click here to edit!</a>
 	<ol style="list-style: none;">
 	{% for i in range(num_comments) %}
 		<li>
