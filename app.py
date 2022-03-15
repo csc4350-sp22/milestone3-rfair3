@@ -138,12 +138,13 @@ def commentfetch():
         return jsonify({"Comments": view_comments})
 
 
+
 @bp.route("/save_comments", methods=["GET",'POST'])
 def savecomments():
     Comments = Comment.query.filter_by(username= current_user.username).all()
 
     edited_comments = flask.request.get_json()
-    
+
 
 
     return("Your changes have been successfully saved", print(edited_comments))
